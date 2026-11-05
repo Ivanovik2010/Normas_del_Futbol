@@ -1,0 +1,856 @@
+/* =================================
+   CONFIGURACIÓ GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    cursor: url("https://cdn-icons-png.flaticon.com/32/861/861512.png") 16 16, auto;
+}
+
+a, button {
+    cursor: url("https://cdn-icons-png.flaticon.com/32/861/861512.png") 16 16, pointer;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7f9;
+    color: #172033;
+    line-height: 1.7;
+}
+
+::selection {
+    background: #28d17c;
+    color: #101827;
+}
+
+/* =================================
+   MENÚ DE NAVEGACIÓ
+================================= */
+
+.header {
+    background: #101827;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #28d17c;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #28d17c;
+    bottom: -7px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover,
+nav a.active {
+    color: #28d17c;
+}
+
+/* =================================
+   PORTADA PRINCIPAL
+================================= */
+
+.hero {
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            rgba(8, 18, 32, 0.76),
+            rgba(8, 18, 32, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 750px;
+    width: 100%;
+    color: white;
+    margin: auto;
+}
+
+.tag {
+    display: inline-block;
+    color: #28d17c;
+    border: 1px solid rgba(40, 209, 124, 0.6);
+    background: rgba(40, 209, 124, 0.08);
+    padding: 7px 17px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 66px);
+    line-height: 1.1;
+    margin-bottom: 22px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: #28d17c;
+}
+
+.hero p {
+    color: #d5dce6;
+    font-size: 17px;
+    max-width: 570px;
+    margin: 0 auto 32px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #28d17c;
+    color: #101827;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =================================
+   INTRODUCCIÓ
+================================= */
+
+.intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 85px auto 55px;
+    padding: 0 20px;
+}
+
+.section-label {
+    color: #16a765;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    color: #101827;
+    margin: 12px 0 15px;
+    letter-spacing: -0.7px;
+}
+
+.intro p {
+    color: #687386;
+    font-size: 15px;
+}
+
+/* =================================
+   TAULA DE NORMES
+================================= */
+
+.rules-container {
+    max-width: 1150px;
+    margin: 0 auto 90px;
+    padding: 0 20px;
+}
+
+.rules-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.rules-heading h3 {
+    font-size: 23px;
+    color: #101827;
+}
+
+.rules-heading span {
+    color: #16a765;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: #e5f8ed;
+    padding: 7px 13px;
+    border-radius: 30px;
+}
+
+.table-wrapper {
+    background: white;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: 0 5px 25px rgba(16, 24, 39, 0.06);
+    border: 1px solid #e9edf2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background: #101827;
+    color: white;
+}
+
+th {
+    padding: 20px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+td {
+    padding: 19px 20px;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 13px;
+    color: #687386;
+}
+
+td:first-child {
+    color: #16a765;
+    font-weight: 900;
+    width: 70px;
+}
+
+td:nth-child(2) {
+    font-weight: bold;
+    color: #172033;
+    width: 210px;
+}
+
+tbody tr {
+    transition: background 0.25s;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+tbody tr:hover {
+    background: #effaf4;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+/* =================================
+   IMÁGENES REDONDEADAS Y MINIMALISTAS
+================================= */
+
+img {
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* EFECTO AL PASAR EL RATÓN */
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* IMÁGENES DE LAS NOTICIAS O CASOS */
+
+.caso img {
+    border-radius: 20px;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* IMÁGENES DE LA PORTADA */
+
+.hero {
+    overflow: hidden;
+}
+
+/* IMÁGENES RESPONSIVE */
+
+@media (max-width: 700px) {
+    .caso img {
+        height: 220px;
+        border-radius: 15px;
+    }
+}
+/* =================================
+   BLOC FINAL
+================================= */
+
+.final-banner {
+    background: #101827;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+    border-top: 3px solid #28d17c;
+}
+
+.final-banner h2 {
+    font-size: 31px;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.final-banner p {
+    color: #b9c4d3;
+    font-size: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* =================================
+   PEU DE PÀGINA
+================================= */
+
+footer {
+    background: #0b1220;
+    color: #8995a7;
+    text-align: center;
+    padding: 27px 15px;
+    font-size: 12px;
+}
+
+footer p:first-child {
+    margin-bottom: 5px;
+}
+/* =================================
+   TEXTOS CENTRADOS Y MAYÚSCULAS
+================================= */
+
+/* Centrar los textos generales */
+body {
+    text-align: center;
+}
+
+/* Menú de navegación */
+nav {
+    justify-content: center;
+}
+
+/* Títulos principales */
+h1, h2, h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Etiquetas y textos destacados */
+.tag,
+.section-label,
+.rules-heading span {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Introducción */
+.intro {
+    text-align: center;
+}
+
+/* Tablas */
+th, td {
+    text-align: center;
+}
+
+/* Formularios */
+.formulari-hero,
+.formulari-titol,
+.formulari-card,
+.destacat {
+    text-align: center;
+}
+
+/* Campos del formulario */
+.camp {
+    text-align: left;
+}
+
+.camp input,
+.camp textarea {
+    width: 100%;
+}
+
+/* Botón */
+.enviar {
+    text-transform: uppercase;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 700px) {
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+/* =================================
+   MÁRGENES LATERALES DE LA PÁGINA
+================================= */
+
+body {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 700px) {
+
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+/* ==========================================
+   FUTBOL TOTAL - DISEÑO VISUAL PREMIUM
+========================================== */
+
+/* ESTILO GENERAL */
+
+body {
+    padding: 0;
+    background: #f1f5f3;
+    overflow-x: hidden;
+}
+
+.container,
+.intro,
+.rules-container,
+.formulari-main {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ANIMACIONES GENERALES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.formulari-hero,
+.intro,
+.formulari-card,
+.destacat {
+    animation: aparecer 0.9s ease both;
+}
+
+/* MENÚ MÁS MODERNO */
+
+.header {
+    background: rgba(16, 24, 39, 0.97);
+    backdrop-filter: blur(12px);
+    padding: 22px 5%;
+}
+
+.logo {
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.06);
+}
+
+nav a {
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+}
+
+/* PORTADA MÁS IMPACTANTE */
+
+.hero {
+    min-height: 600px;
+    border-radius: 0 0 30px 30px;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    line-height: 1.9;
+}
+
+/* ETIQUETAS VERDES */
+
+.tag {
+    box-shadow: 0 0 20px rgba(40, 209, 124, 0.12);
+    transition: 0.3s;
+}
+
+.tag:hover {
+    background: #28d17c;
+    color: #101827;
+}
+
+/* TÍTULOS */
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.7px;
+}
+
+.intro h2 {
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+h2 span,
+h1 span {
+    color: #28d17c;
+}
+
+/* TARJETAS Y CONTENEDORES */
+
+.formulari-card,
+.destacat,
+.table-wrapper {
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(16, 24, 39, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.formulari-card:hover,
+.destacat:hover,
+.table-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(16, 24, 39, 0.13);
+}
+
+/* IMÁGENES */
+
+img {
+    border-radius: 20px;
+    transition: transform 0.5s ease,
+                box-shadow 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 15px 35px rgba(16, 24, 39, 0.18);
+}
+
+/* BOTONES */
+
+.hero-button,
+.enviar {
+    border: none;
+    border-radius: 10px;
+    background: #28d17c;
+    color: #101827;
+    font-weight: 900;
+    padding: 16px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover,
+.enviar:hover {
+    background: #101827;
+    color: #28d17c;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(40, 209, 124, 0.25);
+}
+
+/* FORMULARIO */
+
+.formulari-hero {
+    padding: 75px 25px;
+    background: linear-gradient(135deg, #101827, #1d3540);
+    color: white;
+    border-radius: 0 0 25px 25px;
+}
+
+.formulari-main {
+    max-width: 900px;
+    padding: 30px 15px;
+}
+
+.formulari-card {
+    background: white;
+    padding: 45px;
+    margin: 25px auto;
+}
+
+.camp input,
+.camp textarea {
+    border: 2px solid #e5eaf0;
+    border-radius: 10px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.camp input:focus,
+.camp textarea:focus {
+    outline: none;
+    border-color: #28d17c;
+    box-shadow: 0 0 0 4px rgba(40, 209, 124, 0.12);
+}
+
+/* APARTADO DESTACADO */
+
+.destacat {
+    background: white;
+    padding: 40px;
+    border-left: 5px solid #28d17c;
+    margin: 35px auto;
+}
+
+.destacat-icon,
+.formulari-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* TABLAS */
+
+.table-wrapper {
+    overflow: hidden;
+}
+
+tbody tr {
+    transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+    background: #dff8e9;
+    transform: scale(1.005);
+}
+
+/* BLOQUE FINAL */
+
+.final-banner {
+    background: linear-gradient(135deg, #101827, #1c3940);
+    padding: 90px 25px;
+}
+
+.final-banner h2 {
+    color: white;
+}
+
+.final-banner p {
+    line-height: 1.9;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    border-top: 3px solid #28d17c;
+    background: #0b1220;
+    padding: 35px 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .container,
+    .intro,
+    .rules-container,
+    .formulari-main {
+        width: 94%;
+    }
+
+    .hero {
+        min-height: 450px;
+        background-attachment: scroll;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .formulari-hero {
+        padding: 55px 18px;
+    }
+
+    .formulari-card {
+        padding: 25px 18px;
+    }
+
+    .destacat {
+        padding: 25px 18px;
+    }
+
+    .final-banner {
+        padding: 60px 20px;
+    }
+
+}
+
+/* ACCESIBILIDAD: REDUCIR MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+/* =================================
+   DISSENY PER A MÒBILS
+================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 19px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .intro {
+        margin: 60px auto 40px;
+    }
+
+    .intro h2 {
+        font-size: 29px;
+    }
+
+    .rules-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .rules-heading h3 {
+        font-size: 20px;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .final-banner {
+        padding: 55px 20px;
+    }
+
+    .final-banner h2 {
+        font-size: 25px;
+    }
+}

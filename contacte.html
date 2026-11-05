@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacte | Futbol Total</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+        <a href="Index.html" class="logo">
+            FUTBOL<span>TOTAL</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Inici</a>
+            <a href="robos.html">Robos</a>
+            <a href="normes.html">Normes</a>
+            <a href="contacte.html"class="active">Contacte</a>
+        </nav>
+    </div>
+</header>
+
+<section class="formulari-hero">
+    <span class="tag">ESTEM EN CONTACTE</span>
+    <h1>Contacta amb <span>nosaltres</span></h1>
+    <p>
+        Tens alguna pregunta sobre el futbol o l'arbitratge?
+        Ompli el formulari i participa en el nostre projecte.
+    </p>
+</section>
+
+<main class="formulari-main">
+
+    <section class="formulari-card">
+
+        <div class="formulari-titol">
+            <h2>Formulari de contacte</h2>
+            <p>Completa les dades següents.</p>
+        </div>
+
+        <form action="#" method="post">
+
+            <div class="camp">
+                <label for="nom">Nom complet</label>
+                <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    placeholder="Escriu el teu nom"
+                    required>
+            </div>
+
+            <div class="camp">
+                <label for="email">Correu electrònic</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exemple@gmail.com"
+                    required>
+            </div>
+
+            <div class="camp">
+                <label for="edat">Edat</label>
+                <input
+                    type="number"
+                    id="edat"
+                    name="edat"
+                    placeholder="Quants anys tens?"
+                    min="1"
+                    max="120"
+                    required>
+            </div>
+
+            <div class="camp">
+                <label for="missatge">Missatge</label>
+                <textarea
+                    id="missatge"
+                    name="missatge"
+                    rows="4"
+                    placeholder="Escriu ací el teu missatge..."></textarea>
+            </div>
+
+            <div class="checkbox-camp">
+                <input
+                    type="checkbox"
+                    id="noticies"
+                    name="noticies">
+                <label for="noticies">
+                    Accepte rebre notícies i novetats.
+                </label>
+            </div>
+
+            <button type="submit" class="enviar">
+                Enviar formulari →
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="destacat">
+        <h2>La informàtica i el disseny web</h2>
+        <p>
+            M'agrada molt la informàtica i el disseny web.
+            Per això he creat aquesta pàgina per a compartir
+            informació sobre el món del futbol i l'arbitratge.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Iván Barjas Nuñez | Projecte d'Informàtica</p>
+</footer>
+
+</body>
+</html>
